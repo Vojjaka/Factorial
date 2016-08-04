@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8" />
+<TITLE>Вычисление факториала</TITLE>
+<SCRIPT >
+
+function Vlads(fac){
+	var f = 1;
+	for(i = 1; i <= fac; i++) {
+		f = f * i;
+		if (i < fac){
+			document.write(i + " * ");
+		}
+		else {
+			document.write(i + " = ");
+		}
+	}
+	return f;		
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<SCRIPT language="JavaScript">
+var m_Str1;
+m_Str1=window.prompt("Вычисление факториала\nВведите число", "");
+   if (m_Str1 == null) {
+   		var text = "Вы нажали Отмена";
+      document.write(text);
+   }
+   else if (parseInt(m_Str1) >= 0) {
+   	  // document.write(Vlads());
+      document.write(parseInt(m_Str1) + "!" + " = ");
+      document.write(Vlads(parseInt(m_Str1)));
+    }
+   else {
+
+   		document.write("Введите число, пожалуйста.");
+   }
+
+   // document.write(typeof m_Str1);
+
+</SCRIPT>
+</BODY>
+</HTML>
