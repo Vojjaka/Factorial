@@ -2,27 +2,34 @@
 <HEAD>
 <meta charset="utf-8" />
 <TITLE>Вычисление факториала</TITLE>
-<SCRIPT >
+<SCRIPT>
 
-function Vlads(fac){
+function vladsSolo(fac){
 	var f = 1;
-	for(i = 1; i <= fac; i++) {
+	document.write(fac + "!" + " = ");
+
+	for(var i = 1; i <= fac; i++) {
 		f = f * i;
 		if (i < fac){
 			document.write(i + " * ");
 		}
 		else {
-			document.write(i + " = ");
+			document.write(i + " = " + f);
 		}
 	}
-	return f;		
 }
 
-
+function vladsMulti(x) {
+	for (var i = 1; i <= x; i++) {
+		vladsSolo(i);
+		document.write("</br>");
+	}
+}
 </SCRIPT>
 </HEAD>
 <BODY>
 <SCRIPT language="JavaScript">
+
 var m_Str1;
 m_Str1=window.prompt("Вычисление факториала\nВведите число", "");
    if (m_Str1 == null) {
@@ -30,9 +37,8 @@ m_Str1=window.prompt("Вычисление факториала\nВведите 
       document.write(text);
    }
    else if (parseInt(m_Str1) >= 0) {
-   	  // document.write(Vlads());
-      document.write(parseInt(m_Str1) + "!" + " = ");
-      document.write(Vlads(parseInt(m_Str1)));
+   	  
+      vladsMulti(parseInt(m_Str1));
     }
    else {
 
